@@ -49,7 +49,7 @@ Ensure you have [Node.js](https://nodejs.org/) and npm installed on your machine
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/hacker-portfolio.git
+   git clone https://github.com/yourusername/hacker-portfolio
    cd hacker-portfolio
    ```
 
