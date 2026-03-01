@@ -204,16 +204,16 @@ export const getWeather = async (city) => {
   if (!WEATHER_API_KEY || WEATHER_API_KEY === 'YOUR_API_KEY_HERE') {
     return { error: 'Hava durumu API key henüz ayarlanmamış. Lütfen apiServices.js dosyasındaki WEATHER_API_KEY değişkenini güncelleyin.' };
   }
-  
+
   try {
     const response = await fetch(
       `${WEATHER_API_BASE}?q=${encodeURIComponent(city)}&appid=${WEATHER_API_KEY}&units=metric&lang=tr`
     );
-    
+
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       console.error('Weather API response error:', response.status, errorData);
-      
+
       if (response.status === 404) {
         return { error: 'Şehir bulunamadı' };
       } else if (response.status === 401) {
@@ -221,7 +221,7 @@ export const getWeather = async (city) => {
       }
       return { error: `API Hatası: ${errorData.message || response.statusText}` };
     }
-    
+
     return await response.json();
   } catch (error) {
     console.error('Weather API error:', error);
@@ -317,11 +317,11 @@ export const getRandomAsciiArt = () => {
    '-._____.-'
     `
   ];
-  
+
   return arts[Math.floor(Math.random() * arts.length)];
 };
 
-export default {
+const apiServices = {
   textToAscii,
   getAsciiFonts,
   getRandomJoke,
@@ -332,3 +332,5 @@ export default {
   getWeather,
   getRandomAsciiArt
 };
+
+export default apiServices;
