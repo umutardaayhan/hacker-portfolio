@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="public/favicon.svg" alt="U. A. A. Terminal Logo" width="120" height="120">
+  <br>
+  <h1>U. A. A. Terminal Portfolio</h1>
+  <p><strong>An Interactive, Hacker-Themed Personal Portfolio Website</strong></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p>
+    <a href="https://terminal-portfolio.vercel.app/"><img src="https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Deployed on Vercel"></a>
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"></a>
+    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"></a>
+    <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License">
+  </p>
+</div>
 
-## Available Scripts
+<hr>
 
-In the project directory, you can run:
+## 🖥️ Overview
 
-### `npm start`
+Welcome to the **U. A. A. Terminal Portfolio**. This project is a highly interactive, command-line interface (CLI) styled personal portfolio built with React and Tailwind CSS. It simulates a hacker/cyberpunk terminal environment where visitors can explore your experience, skills, and projects by intentionally "hacking" through directories using standard Linux-like commands.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Key Features
 
-### `npm test`
+- **💻 Realistic Terminal UI/UX:** Complete with matrix rain effects, CRT scanlines (optional), dynamic blinking cursors, and phosphor-green glowing text.
+- **⚙️ Interactive Commands:** Supports widely used terminal commands such as `help`, `ls`, `cd`, `cat`, `clear`, `whoami`, `echo`, and more.
+- **🎨 Custom Theming:** Change the terminal text color dynamically using built-in commands (e.g., matrix green, cyber cyan, amber).
+- **📱 Fully Responsive:** Carefully calibrated to work smoothly on both desktop monitors and mobile device screens.
+- **🚀 SEO Optimized:** Ready for search engines and features automatic Open Graph previews for rich embedding on platforms like Discord, Twitter, and LinkedIn.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Framework:** [React 18](https://reactjs.org/) (Create React App)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) for rapid and highly customizable UI design.
+- **Animations:** Pure CSS and React hooks for typing effects, matrix rain, and glitch effects.
+- **Deployment:** Zero-config deploy ready for [Vercel](https://vercel.com/) with a custom SPA routing (`vercel.json`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Quick Start (Local Development)
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ensure you have [Node.js](https://nodejs.org/) and npm installed on your machine.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/hacker-portfolio.git
+   cd hacker-portfolio
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Run the local development server:**
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Open [http://localhost:3000](http://localhost:3000) in your local browser to view the terminal.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ☁️ Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This portfolio is configured to be deployed easily using Vercel.
 
-### Analyzing the Bundle Size
+1. Create a GitHub repository and push this code to your `main` branch.
+2. Go to [Vercel](https://vercel.com/), click **Add New...** -> **Project**.
+3. Import your GitHub repository.
+4. Leave the Framework Preset as **Create React App**.
+5. Click **Deploy**. Vercel will automatically read the `vercel.json` file to manage SPA routing routing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 💡 Available Commands
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Once you boot up the website, type `help` to see a list of commands. Standard commands include:
+- `help` : Displays available commands.
+- `ls` : Lists directory contents (e.g., your projects or skills).
+- `cd` : Traverses into a directory.
+- `cat` : Reads the contents of a specific file.
+- `clear`: Clears the terminal screen.
+- `matrix`: Initiates the classic Matrix code rain effect. 
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+  <p>Built with 🫀 by <b>U. A. A.</b></p>
+  <p><i>System Secured. Access Granted.</i></p>
+</div>
