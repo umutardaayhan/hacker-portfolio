@@ -235,8 +235,8 @@ DİLLER:
 Neo Pokedex, ASP.NET Core 9.0 ile geliştirdiğim, performans ve kullanıcı deneyimi odaklı bir Pokemon veri platformu. Uygulama; gelişmiş filtreleme, favori yönetimi, tür analizleri ve SEO destekli sayfa yapısıyla hem teknik hem ürün tarafında güçlü bir örnek proje olarak konumlanıyor.
 
 - Teknolojiler: ASP.NET Core 9.0, Entity Framework, SQLite, PokeAPI
-- GitHub: github.com/umutardaayhan/NeoPokedex
-- Website: neopokedex.runasp.net`
+- GitHub: https://github.com/umutardaayhan/NeoPokedex
+- Website: https://neopokedex.runasp.net`
               }
             ]
           },
@@ -251,7 +251,7 @@ Neo Pokedex, ASP.NET Core 9.0 ile geliştirdiğim, performans ve kullanıcı den
 NoireConverter, görsel/ ses/ video/ doküman dosyalarını tek bir uygulamada dönüştürme, optimize etme, yeniden boyutlandırma, GIF üretme, OCR ile metin çıkarma ve toplu dosya operasyonlarını yönetme ihtiyaçlarını birleştiren modüler bir araçtır. Projede masaüstü (CustomTkinter) kullanım deneyimi ile FastAPI tabanlı servis katmanı ve vanilla JavaScript web istemcisi birlikte kurgulanmıştır.
 
 - Teknolojiler: Python, FastAPI, CustomTkinter, Vanilla JS
-- GitHub: github.com/umutardaayhan/NoireConverter`
+- GitHub: https://github.com/umutardaayhan/NoireConverter`
               }
             ]
           },
@@ -266,8 +266,8 @@ NoireConverter, görsel/ ses/ video/ doküman dosyalarını tek bir uygulamada d
 PromptNexus, kullanıcıdan alınan kısa/ dağınık fikirleri yapılandırılmış ve yüksek kaliteli AI promptlarına dönüştüren bir React tabanlı web uygulamasıdır. Uygulama, Gemini 2.5 Flash entegrasyonu ile prompt üretimini otomatikleştirirken; hedef model seçimi, proje türü bağlamı, karmaşıklık seviyesi, şablon sistemi ve çok dilli çıktı gibi özelliklerle üretim kalitesini artırır. API anahtarı, geçmiş, favoriler ve kullanım limiti yönetimi gibi kullanıcı odaklı fonksiyonlar tarayıcı tarafında güvenli şekilde yönetilir.
 
 - Teknolojiler: React, Vite, Tailwind CSS, Gemini API
-- GitHub: github.com/umutardaayhan/PromptNexus
-- Website: prompt-nexus-one.vercel.app`
+- GitHub: https://github.com/umutardaayhan/PromptNexus
+- Website: https://prompt-nexus-one.vercel.app`
               }
             ]
           },
@@ -282,8 +282,8 @@ PromptNexus, kullanıcıdan alınan kısa/ dağınık fikirleri yapılandırılm
 React ve Tailwind CSS ile terminal deneyimini web ortamına taşıyan, komut çalıştırma mantığına sahip interaktif bir kişisel portfolyo geliştirdim. Kullanıcılar klasik komut satırı benzeri komutlarla (\`help\`, \`ls\`, \`cd\`, \`cat\`, \`projects\`, \`skills\` vb.) içerikte gezinebiliyor; Matrix rain animasyonu, typing efekti, tema/ renk yönetimi ve responsive yapı sayesinde güçlü bir kullanıcı deneyimi sunuluyor.
 
 - Teknolojiler: React, Tailwind CSS, JavaScript
-- GitHub: github.com/umutardaayhan
-- Website: hacker-portfolio-eta.vercel.app`
+- GitHub: https://github.com/umutardaayhan
+- Website: https://hacker-portfolio-eta.vercel.app`
               }
             ]
           },

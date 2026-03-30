@@ -137,8 +137,11 @@ ${eduLines}
       const expList = experience.map(exp => `  • ${exp.position} — ${exp.company} (${exp.period})\n    ${exp.description.replace(/\\n/g, ' ')}`).join('\n\n');
       
       let prjList = '';
-      projects.slice(0, 3).forEach(p => {
-        prjList += `  • ${p.name}: ${p.description.substring(0, 100)}...\n`;
+      projects.forEach(p => {
+        prjList += `  • ${p.name}\n    ${p.description.substring(0, 120)}...`;
+        if (p.github) prjList += `\n    GitHub: ${p.github}`;
+        if (p.demo) prjList += `\n    Demo: ${p.demo}`;
+        prjList += '\n\n';
       });
       
       return {
@@ -314,9 +317,7 @@ ${prjList}
           };
         }
         
-        return {
-          type: 'info',
-          content: `
+        let detailContent = `
 ╔════════════════════════════════════════╗
 ║  ${project.name.padEnd(36)} ║
 ╚════════════════════════════════════════╝
@@ -324,9 +325,14 @@ ${prjList}
 ${project.description}
 
 Teknolojiler: ${project.technologies.join(', ')}
-GitHub: ${project.github || 'N/A'}
-Demo: ${project.demo || 'N/A'}
-          `.trim(),
+`.trim();
+
+        if (project.github) detailContent += `\nGitHub: ${project.github}`;
+        if (project.demo) detailContent += `\nDemo: ${project.demo}`;
+
+        return {
+          type: 'info',
+          content: detailContent,
           options: { typingEffect: true }
         };
       }
