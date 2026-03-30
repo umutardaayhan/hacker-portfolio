@@ -332,13 +332,13 @@ Demo: ${project.demo || 'N/A'}
       }
       
       const projectList = projects.map((p, i) => 
-        `${i + 1}. ${p.name} ${p.featured ? '⭐' : ''} - ${p.technologies.slice(0, 3).join(', ')}...`
-      ).join('\n');
+        `[${i + 1}] ${p.name} ${p.featured ? '⭐' : ''}\n${p.description}\nTeknolojiler: ${p.technologies.join(', ')}`
+      ).join('\n\n' + '─'.repeat(40) + '\n\n');
       
       return {
         type: 'info',
-        content: `Projelerim:\n\n${projectList}\n\nDetay için: projects <proje_adı>`,
-        options: { typingEffect: true }
+        content: `PROJELERİM:\n\n${projectList}\n\n(Daha fazla detay için: projects <proje_adı>)`,
+        options: { typingEffect: true, typingSpeed: 5 }
       };
     }
   },
