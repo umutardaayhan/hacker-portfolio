@@ -112,6 +112,33 @@ const portfolioData = {
       github: "https://github.com/umutardaayhan",
       demo: "https://hacker-portfolio-eta.vercel.app",
       featured: true
+    },
+    {
+      id: 5,
+      name: "Replik AI",
+      description: "Üretken Yapay Zeka tabanlı senaryo üretim ve interaktif hikaye platformu. Replik AI projesinde, LangGraph tabanlı çok ajanlı (multi-agent) bir üretim mimarisiyle tiyatro/ rol yapma senaryoları üreten uçtan uca bir platform geliştirdim. FastAPI + PostgreSQL + Redis + Next.js + Telegram Bot entegrasyonunu aynı ürün çatısı altında çalıştırarak hem web hem de sohbet tabanlı kullanıcı deneyimi sağladım.",
+      technologies: ["FastAPI", "PostgreSQL", "Redis", "Next.js", "LangGraph", "Docker", "Telegram Bot API"],
+      github: null,
+      demo: null,
+      featured: true
+    },
+    {
+      id: 6,
+      name: "Influencer Factory",
+      description: "Uçtan uca çok ajanlı içerik üretim mimarisi tasarımı, persona pipeline'ı, kalite kontrol döngüsü, çıktı paketleme ve otomasyon entegrasyonları. Sosyal medya planları, görsel-video üretim promptları ve platforma uygun caption'lar üretir.",
+      technologies: ["CLI", "Streamlit", "JSON / Markdown", "Multi-Agent"],
+      github: null,
+      demo: null,
+      featured: true
+    },
+    {
+      id: 7,
+      name: "Grimoire",
+      description: "Yazarların hikaye planlama, yazım, düzenleme ve dışa aktarma süreçlerini tek bir platformda yönetmesini sağlayan; AI destekli özellikler ve görsel hikaye kurgulama araçları içeren bir ürün. Zengin metin editörü, AI metin analizi, PDF/EPUB dışa aktarımı barındırır.",
+      technologies: ["AI", "PDF / EPUB Export", "Rich Text Editor"],
+      github: null,
+      demo: null,
+      featured: true
     }
   ],
 
@@ -257,6 +284,48 @@ React ve Tailwind CSS ile terminal deneyimini web ortamına taşıyan, komut ça
 - Teknolojiler: React, Tailwind CSS, JavaScript
 - GitHub: github.com/umutardaayhan
 - Website: hacker-portfolio-eta.vercel.app`
+              }
+            ]
+          },
+          {
+            name: "replikai",
+            type: "directory",
+            children: [
+              {
+                name: "README.md",
+                type: "file",
+                content: `# Replik AI
+Üretken Yapay Zeka tabanlı senaryo üretim ve interaktif hikaye platformu. Replik AI projesinde, LangGraph tabanlı çok ajanlı (multi-agent) bir üretim mimarisiyle tiyatro/ rol yapma senaryoları üreten uçtan uca bir platform geliştirdim. FastAPI + PostgreSQL + Redis + Next.js + Telegram Bot entegrasyonunu aynı ürün çatısı altında çalıştırarak hem web hem de sohbet tabanlı kullanıcı deneyimi sağladım.
+
+- Teknolojiler: FastAPI, PostgreSQL, Redis, Next.js, LangGraph, Docker, Telegram Bot API`
+              }
+            ]
+          },
+          {
+            name: "influencerfactory",
+            type: "directory",
+            children: [
+              {
+                name: "README.md",
+                type: "file",
+                content: `# Influencer Factory
+Uçtan uca çok ajanlı içerik üretim mimarisi tasarımı, persona pipeline'ı, kalite kontrol döngüsü, çıktı paketleme ve otomasyon entegrasyonları. Sosyal medya planları, görsel-video üretim promptları ve platforma uygun caption'lar üretir.
+
+- Teknolojiler: CLI, Streamlit, JSON / Markdown, Multi-Agent`
+              }
+            ]
+          },
+          {
+            name: "grimoire",
+            type: "directory",
+            children: [
+              {
+                name: "README.md",
+                type: "file",
+                content: `# Grimoire
+Yazarların hikaye planlama, yazım, düzenleme ve dışa aktarma süreçlerini tek bir platformda yönetmesini sağlayan; AI destekli özellikler ve görsel hikaye kurgulama araçları içeren bir ürün. Zengin metin editörü, AI metin analizi, PDF/EPUB dışa aktarımı barındırır.
+
+- Teknolojiler: AI, PDF / EPUB Export, Rich Text Editor`
               }
             ]
           }
