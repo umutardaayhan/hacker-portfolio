@@ -331,9 +331,12 @@ Demo: ${project.demo || 'N/A'}
         };
       }
       
-      const projectList = projects.map((p, i) => 
-        `[${i + 1}] ${p.name} ${p.featured ? '⭐' : ''}\n${p.description}\nTeknolojiler: ${p.technologies.join(', ')}`
-      ).join('\n\n' + '─'.repeat(40) + '\n\n');
+      const projectList = projects.map((p, i) => {
+        let details = `[${i + 1}] ${p.name} ${p.featured ? '⭐' : ''}\n${p.description}\nTeknolojiler: ${p.technologies.join(', ')}`;
+        if (p.github) details += `\nGitHub: ${p.github}`;
+        if (p.demo) details += `\nDemo: ${p.demo}`;
+        return details;
+      }).join('\n\n' + '─'.repeat(40) + '\n\n');
       
       return {
         type: 'info',
