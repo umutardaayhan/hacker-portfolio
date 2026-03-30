@@ -59,6 +59,10 @@ Kısayollar: ${commands[cmd].aliases?.join(', ') || 'Yok'}
     aliases: ['about', 'info'],
     execute: (args, context) => {
       const { user } = portfolioData;
+      
+      const eduLines = user.education.map(e => `• ${e.school} - ${e.degree} (${e.period})`).join('\n');
+      const langLines = user.languages.join(', ');
+
       return {
         type: 'info',
         content: `
@@ -71,8 +75,96 @@ ${user.bio}
 
 Deneyim: ${user.experience}
 Konum: ${user.location}
+Diller: ${langLines}
+
+Eğitim:
+${eduLines}
         `.trim(),
-        options: { typingEffect: true, typingSpeed: 20 }
+        options: { typingEffect: true, typingSpeed: 10 }
+      };
+    }
+  },
+
+  experience: {
+    name: 'experience',
+    description: 'İş deneyimlerini listeler',
+    usage: 'experience',
+    aliases: ['exp', 'work'],
+    execute: (args, context) => {
+      const { experience } = portfolioData;
+      
+      const expList = experience.map((exp, i) => 
+        `[${i+1}] ${exp.position} — ${exp.company} (${exp.period})\n${exp.description}`
+      ).join('\n\n');
+
+      return {
+        type: 'info',
+        content: `İŞ DENEYİMLERİ:\n\n${expList}`,
+        options: { typingEffect: true, typingSpeed: 10 }
+      };
+    }
+  },
+
+  education: {
+    name: 'education',
+    description: 'Eğitim bilgilerini gösterir',
+    usage: 'education',
+    aliases: ['edu', 'school'],
+    execute: (args, context) => {
+      const { user } = portfolioData;
+      
+      const eduList = user.education.map((edu, i) => 
+        `[${i+1}] ${edu.school}\n    ${edu.degree}\n    ${edu.location} | ${edu.period}`
+      ).join('\n\n');
+
+      return {
+        type: 'info',
+        content: `EĞİTİM GEÇMİŞİ:\n\n${eduList}`,
+        options: { typingEffect: true, typingSpeed: 15 }
+      };
+    }
+  },
+
+  cv: {
+    name: 'cv',
+    description: 'Tam CV özetini gösterir',
+    usage: 'cv',
+    aliases: ['resume', 'profile'],
+    execute: (args, context) => {
+      const { user, experience, projects } = portfolioData;
+      
+      const eduList = user.education.map(edu => `  • ${edu.school} (${edu.degree}) - ${edu.period}`).join('\n');
+      const expList = experience.map(exp => `  • ${exp.position} — ${exp.company} (${exp.period})\n    ${exp.description.replace(/\\n/g, ' ')}`).join('\n\n');
+      
+      let prjList = '';
+      projects.slice(0, 3).forEach(p => {
+        prjList += `  • ${p.name}: ${p.description.substring(0, 100)}...\n`;
+      });
+      
+      return {
+        type: 'info',
+        content: `
+════════════════════════════════════════════════════════════
+${user.name.toUpperCase()} - ${user.title.toUpperCase()}
+Lokasyon: ${user.location} | Deneyim: ${user.experience}
+Diller: ${user.languages.join(', ')}
+════════════════════════════════════════════════════════════
+
+[ PROFİL ]
+${user.bio}
+
+[ EĞİTİM ]
+${eduList}
+
+[ DENEYİM ]
+${expList}
+
+[ SEÇİLMİŞ PROJELER ]
+${prjList}
+════════════════════════════════════════════════════════════
+*(Detaylar için 'skills', 'projects', 'contact' komutlarını kullanın)*
+        `.trim(),
+        options: { typingEffect: true, typingSpeed: 5 }
       };
     }
   },
