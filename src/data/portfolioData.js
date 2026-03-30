@@ -1,47 +1,65 @@
 const portfolioData = {
   user: {
     name: "Umut Arda Ayhan",
-    title: "Software Developer",
-    bio: "Yazılım geliştirme süreçlerini optimize etmeye odaklanan, kod mimarisi ve proje yönetimi konularında uzmanlaşan bir geliştirici. Yapay zeka teknolojilerine özel ilgi duyuyor.",
-    experience: "2+ yıl",
+    title: "Full Stack Geliştirici",
+    bio: "Replik AI, Influencer Factory ve Grimoire gibi yapay zeka ve orkestrasyon merkezli projelerde görev almış, LangGraph ve LangChain mimarileri ile uçtan uca Multi-Agent sistemler inşa eden Full Stack Geliştirici. Temiz ürün yaklaşımı ve çoklu platform çözümleri dahilinde çalışmaktayım.",
+    experience: "3+ yıl",
     location: "Türkiye",
-    education: "Gazi Üniversitesi - Bilgisayar Mühendisliği (3. sınıf)",
-    languages: ["Türkçe (Ana dil)", "İngilizce"]
+    education: "Gazi Üniversitesi - Bilgisayar Mühendisliği (Devam ediyor) | AYBÜ - Bilgisayar Programcılığı / Yüksek Onur Öğrencisi (Mezun)",
+    languages: ["Türkçe (Anadil)", "İngilizce (B2)"]
   },
 
   contact: {
     email: "umutardaayhan1c@gmail.com",
     linkedin: "https://www.linkedin.com/in/umut-arda-ayhan-b20b9b268/",
     github: "https://github.com/umutardaayhan",
-    twitter: "https://x.com/UArdaAyhan",
-    website: "https://umutardaayhan.com"
+    twitter: null,
+    website: null
   },
 
   skills: {
     frontend: [
+      "Next.js",
       "React",
-      "JavaScript",
-      "HTML/CSS",
+      "TypeScript",
       "Tailwind CSS",
-      "Vite"
+      "Razor",
+      "Responsive UI/UX"
     ],
     backend: [
-      "ASP.NET Core",
-      "C#",
-      "C++",
       "Python",
-      "SQLite"
-    ],
-    tools: [
-      "Git/GitHub",
-      "Vercel",
-      "VS Code",
-      "FFmpeg"
-    ],
-    methodologies: [
-      "MVC",
+      "FastAPI",
+      "C#",
+      "ASP.NET Core MVC",
       "REST API",
-      "AI / Machine Learning"
+      "Async Processing",
+      "Migration Yönetimi"
+    ],
+    ai_ekosistemi: [
+      "LangGraph",
+      "LangChain",
+      "Prompt Engineering",
+      "Structured Output",
+      "Multi-Agent Workflows",
+      "RAG / FAISS",
+      "Kalite Kontrol Döngüleri",
+      "Prompt Security"
+    ],
+    veri_depolama: [
+      "PostgreSQL",
+      "SQLite",
+      "Redis",
+      "Prisma",
+      "SQLAlchemy",
+      "MsSQL"
+    ],
+    araclar: [
+      "Docker",
+      "PyInstaller",
+      "Alembic",
+      "Git / GitHub",
+      "Streamlit",
+      "Vite"
     ]
   },
 
@@ -49,7 +67,7 @@ const portfolioData = {
     {
       id: 1,
       name: "NeoPokedex",
-      description: "Modern, yüksek performanslı Pokedex uygulaması. ASP.NET Core 9.0 ile geliştirilmiştir. 1025 Pokemon'u destekler, yerel önbellekleme, tip eşleşme motoru ve favoriler sistemi içerir.",
+      description: "ASP.NET Core 9.0 ile geliştirilmiş, performans ve kullanıcı deneyimi odaklı bir Pokemon veri platformu. 1025 Pokemonu barındırıyor. Gelişmiş filtreleme, favori yönetimi, tür analizleri ve SEO destekli sayfa yapısına sahiptir.",
       technologies: ["ASP.NET Core 9.0", "Entity Framework", "SQLite", "PokeAPI"],
       github: "https://github.com/umutardaayhan/NeoPokedex",
       demo: "https://neopokedex.runasp.net",
@@ -58,28 +76,28 @@ const portfolioData = {
     {
       id: 2,
       name: "NoireConverter",
-      description: "Python ve FFmpeg ile geliştirilmiş hepsi-bir-arada medya işleme aracı. Görüntü/dönüştürme, PDF işlemleri, toplu yeniden adlandırma ve GIF oluşturma özellikleri sunar.",
-      technologies: ["Python", "FFmpeg", "PyQt"],
+      description: "Görsel, ses, video ve doküman dosyalarını tek uygulamada dönüştürme, optimize etme, OCR metin çıkarma ve toplu dosya operasyonlarını yönetme üzerine kurulu modüler bir masaüstü ve web hibrit aracı.",
+      technologies: ["Python", "FastAPI", "CustomTkinter", "Vanilla JS"],
       github: "https://github.com/umutardaayhan/NoireConverter",
       demo: null,
       featured: true
     },
     {
       id: 3,
-      name: "NoirePlanner",
-      description: "C++ ile geliştirilmiş planlama ve organizasyon uygulaması.",
-      technologies: ["C++"],
-      github: "https://github.com/umutardaayhan/NoirePlanner",
-      demo: null,
-      featured: false
-    },
-    {
-      id: 4,
       name: "PromptNexus",
-      description: "Google Gemini 2.5 Flash destekli AI Prompt Generator. React ile geliştirilmiş modern web uygulaması. 29 hazır şablon, çoklu AI desteği ve IDE agent entegrasyonu sunar.",
+      description: "Google Gemini 2.5 Flash destekli AI Prompt Generator. Kullanıcıdan alınan kısa ve dağınık fikirleri yapılandırılmış, yüksek kaliteli promptlara dönüştüren React JS tabanlı web uygulaması.",
       technologies: ["React", "Vite", "Tailwind CSS", "Gemini API"],
       github: "https://github.com/umutardaayhan/PromptNexus",
       demo: "https://prompt-nexus-one.vercel.app",
+      featured: true
+    },
+    {
+      id: 4,
+      name: "Hacker Terminal Portfolio",
+      description: "React ve Tailwind CSS ile terminal deneyimini web ortamına taşıyan, komut çalıştırma mantığına sahip (help, ls, cat vb.) interaktif kişisel portfolyo. Matrix efektli arayüz içeriyor.",
+      technologies: ["React", "Tailwind CSS", "JavaScript", "Terminal UI"],
+      github: "https://github.com/umutardaayhan",
+      demo: "https://hacker-portfolio-eta.vercel.app",
       featured: true
     }
   ],
@@ -88,10 +106,22 @@ const portfolioData = {
 
   experience: [
     {
-      company: "Open Source",
-      position: "Software Developer",
-      period: "2020 - Günümüz",
-      description: "GitHub'da kişisel projeler geliştirme. ASP.NET Core, C++, JavaScript projeleri."
+      company: "Replik AI",
+      position: "Full-Stack AI Engineer",
+      period: "Devam ediyor",
+      description: "LangGraph tabanlı çok ajanlı (multi-agent) üretim mimarisiyle interaktif hikaye platformu. FastAPI + PostgreSQL + Redis + Next.js + Telegram Bot entegrasyonu. Prompt Injection koruması ve Docker tabanlı dağıtım süreciyle modüler sistem tasarımı."
+    },
+    {
+      company: "Influencer Factory",
+      position: "AI Automation Developer",
+      period: "Geçmiş Deneyim",
+      description: "Persona verisi ve görsel referanslardan yola çıkarak sosyal medya planları, platform promptları ve içerikler üreten AI içerik otomasyonu. Üretim sürecini CLI ve Streamlit dashboardları ile ölçekleme imkanı."
+    },
+    {
+      company: "Grimoire",
+      position: "Product Engineer",
+      period: "Devam ediyor",
+      description: "Yazarların hikaye planlama, yazım ve düzenleme süreçlerini yönetmesini sağlayan AI destekli platform. PDF/EPUB dışa aktarımı, zengin metin düzenleme ve kimlik doğrulama, abonelik sistemi kurgusu ile ürün geliştirme."
     }
   ],
 
@@ -107,28 +137,36 @@ const portfolioData = {
             name: "whoami.txt",
             type: "file",
             content: `AD: Umut Arda Ayhan
-UNVAN: Software Developer
+UNVAN: Full Stack Geliştirici
 KONUM: Türkiye
 
 HAKKIMDA:
-Yazılım geliştirme süreçlerini optimize etmeye odaklanan,
-kod mimarisi ve proje yönetimi konularında uzmanlaşan
-bir geliştirici. Yapay zeka teknolojilerine özel ilgi duyuyor.
+Replik AI, Influencer Factory ve Grimoire gibi projelerde görev almış, 
+LangGraph ve LangChain gibi teknolojilerle AI & Orchestration 
+süreçlerinde uzmanlaşmış Full Stack Geliştirici. Modüler mimari ve
+çoklu platform (web, desktop, bot) odaklı ürünler geliştirmeyi sever.
 
 EĞİTİM:
-• AYBU - Bilgisayar Programcılığı (Mezun)
-• Gazi Üniversitesi - Bilgisayar Mühendisliği (3. sınıf, Devam Ediyor)`
+• AYBÜ - Bilgisayar Programcılığı / Yüksek Onur Öğrencisi (Mezun)
+• Gazi Üniversitesi - Bilgisayar Mühendisliği (2025 - Devam Ediyor)`
           },
           {
             name: "experience.txt",
             type: "file",
-            content: `DENEYİM:
+            content: `DENEYİM (PROJE BAZLI):
 
-2020 - Günümüz | Open Source
-Software Developer
-- GitHub'da kişisel projeler
-- ASP.NET Core, C++, JavaScript
-- 2+ yıllık geliştirme deneyimi`
+1. Full-Stack AI Engineer — Replik AI (Devam ediyor)
+- Üretken Yapay Zeka (LangGraph) tabanlı senaryo/hikaye platformu.
+- FastAPI + PostgreSQL + Redis + Next.js + Telegram Bot.
+- Asenkron görev yönetimi, Docker, Prompt Injection koruması.
+
+2. AI Automation Developer — Influencer Factory
+- Uçtan uca çok ajanlı içerik üretim mimarisi tasarımı.
+- Persona pipeline, CLI + Streamlit dashboard üzerinden otomasyon.
+
+3. Product Engineer — Grimoire (Devam ediyor)
+- Yazarlar için detaylı hikaye kurgulama, metin editörü.
+- AI destekli metin analizi, PDF/EPUB dışa aktarımı, Abonelik altyapısı.`
           }
         ]
       },
@@ -143,26 +181,18 @@ Software Developer
               {
                 name: "README.md",
                 type: "file",
-                content: `# NeoPokedex v1.6
+                content: `# NeoPokedex
+ASP.NET Core 9.0 ile geliştirdiğim, performans ve kullanıcı deneyimi odaklı bir Pokemon veri platformu (1025 Pokemon).
 
-Modern, yüksek performanslı Pokedex uygulaması.
+## Özellikler:
+- Gelişmiş filtreleme ve detaylı gösterim.
+- Favoriler sistemi ve tür/zayıflık analizleri.
+- SEO destekli sayfa yapısı.
 
-## Özellikler
-- 1025 Pokemon (Gen 9 desteği)
-- Yerel önbellekleme
-- Tip eşleşme motoru (Weaknesses/Resistances)
-- Favoriler sistemi
-- Shiny mod ve ses efektleri
+## Teknolojiler:
+- ASP.NET Core 9.0, Entity Framework, SQLite, PokeAPI
 
-## Teknolojiler
-- ASP.NET Core 9.0
-- Entity Framework Core
-- SQLite
-- PokeAPI
-
-## Linkler
-- GitHub: github.com/umutardaayhan/NeoPokedex
-- Demo: neopokedex.runasp.net`
+Linkler: github.com/umutardaayhan/NeoPokedex | neopokedex.runasp.net`
               }
             ]
           },
@@ -173,44 +203,18 @@ Modern, yüksek performanslı Pokedex uygulaması.
               {
                 name: "README.md",
                 type: "file",
-                content: `# NoireConverter v1.6
+                content: `# NoireConverter
+Masaüstü (CustomTkinter) kullanım deneyimi ile FastAPI tabanlı servis katmanı ve vanilla JavaScript web istemcisini birleştiren modüler araç.
 
-Python ve FFmpeg ile geliştirilmiş hepsi-bir-arada medya işleme aracı.
+## Özellikler:
+- Görsel/ses/video dönüştürme, optimize etme, GIF üretme.
+- OCR metin çıkarma (PDF ve Resimlerden).
+- Toplu dosya yönetimi.
 
-## Özellikler
-- Görüntü format dönüştürme (WEBP, PNG, JPG, ICO)
-- Ses dönüştürme (MP3, WAV)
-- PDF işlemleri (Word/PowerPoint dönüşümü)
-- Toplu yeniden adlandırma
-- GIF oluşturma
-- Text extraction
+## Teknolojiler:
+- Python, FastAPI, CustomTkinter, Vanilla JS
 
-## Teknolojiler
-- Python
-- FFmpeg
-- PyQt
-
-## Linkler
-- GitHub: github.com/umutardaayhan/NoireConverter`
-              }
-            ]
-          },
-          {
-            name: "noireplanner",
-            type: "directory",
-            children: [
-              {
-                name: "README.md",
-                type: "file",
-                content: `# NoirePlanner
-
-C++ ile geliştirilmiş planlama uygulaması.
-
-## Teknolojiler
-- C++
-
-## Linkler
-- GitHub: github.com/umutardaayhan/NoirePlanner`
+Linkler: github.com/umutardaayhan/NoireConverter`
               }
             ]
           },
@@ -221,27 +225,40 @@ C++ ile geliştirilmiş planlama uygulaması.
               {
                 name: "README.md",
                 type: "file",
-                content: `# PromptNexus v1.2
+                content: `# PromptNexus
+Kullanıcıdan alınan dağınık fikirleri yapılandırılmış ve yüksek kaliteli AI promptlarına dönüştüren web uygulaması.
 
-Google Gemini 2.5 Flash destekli AI Prompt Generator.
+## Özellikler:
+- Gemini 2.5 Flash entegrasyonu (Çoklu AI hedef model kurgusu).
+- Çok dilli çıktı, yaratıcılık seviyeleri ve karmaşıklık yönetimi.
+- Tarayıcı tarafında API anahtarı yönetimi.
+
+## Teknolojiler:
+- React, Vite, Tailwind CSS, Gemini API
+
+Linkler: github.com/umutardaayhan/PromptNexus | prompt-nexus-one.vercel.app`
+              }
+            ]
+          },
+          {
+            name: "hackerportfolio",
+            type: "directory",
+            children: [
+              {
+                name: "README.md",
+                type: "file",
+                content: `# Hacker Terminal Portfolio
+Şu anda içerisinde bulunduğunuz bu kişisel web portfolyosu.
 
 ## Özellikler
-- 29 hazır prompt şablonu
-- Çoklu AI desteği (ChatGPT, Claude, Midjourney, DALL-E, Gemini)
-- IDE Agent entegrasyonu (Cursor, GitHub Copilot, Windsurf)
-- 12 farklı dilde çıktı
-- Yaratıcılık seviyesi ayarı
-- Responsive tasarım
+- Tam teşekküllü Terminal arayüzü
+- Matrix rain efekti ve interaktif komut istemleri 
+- Yardım, oyun ve bilgi API'si (Zeka sorusu, Şaka vb.) entegrasyonu.
 
 ## Teknolojiler
-- React
-- Vite
-- Tailwind CSS
-- Google Gemini API
+- React, Tailwind CSS
 
-## Linkler
-- GitHub: github.com/umutardaayhan/PromptNexus
-- Demo: prompt-nexus-one.vercel.app`
+Linkler: github.com/umutardaayhan`
               }
             ]
           }
@@ -254,34 +271,41 @@ Google Gemini 2.5 Flash destekli AI Prompt Generator.
           {
             name: "frontend.txt",
             type: "file",
-            content: `FRONTEND:
-- React
-- JavaScript
-- HTML/CSS
+            content: `FRONTEND EKO SİSTEMİ:
+- Next.js
+- React & TypeScript
 - Tailwind CSS
-- Vite`
+- Razor
+- Responsive UI/ UX Tasarımı`
           },
           {
             name: "backend.txt",
             type: "file",
-            content: `BACKEND:
-- ASP.NET Core
-- C#
-- C++
-- Python
-- SQLite`
+            content: `BACKEND VE MİMARİ:
+- Python, FastAPI
+- C#, ASP.NET Core MVC
+- REST API
+- Async Processing
+- Migration Yönetimi`
           },
           {
-            name: "tools.txt",
+            name: "ai_ekosistemi.txt",
             type: "file",
-            content: `ARAÇLAR:
-- Git/GitHub
-- Vercel
-- VS Code
-- FFmpeg
-
-İLGİ ALANLARI:
-- AI / Machine Learning`
+            content: `AI VE ORKESTRASYON:
+- LangGraph & LangChain
+- Prompt Engineering & Prompt Security
+- Structured Outputs & Kalite Kontrol Döngüleri
+- Multi-Agent Workflows
+- RAG & FAISS`
+          },
+          {
+            name: "veri_ve_araclar.txt",
+            type: "file",
+            content: `VERİ ALTYAPISI VE ARAÇLAR:
+- Veritabanları: PostgreSQL, SQLite, Redis, MsSQL
+- ORM: Prisma, SQLAlchemy
+- Araçlar: Docker, PyInstaller, Vite
+- Versiyon Kontrol vb: Git, GitHub, Streamlit, Alembic`
           }
         ]
       },
@@ -292,11 +316,11 @@ Google Gemini 2.5 Flash destekli AI Prompt Generator.
           {
             name: "info.txt",
             type: "file",
-            content: `İLETİŞİM BİLGİLERİ:
+            content: `BANA ULAŞABİLECEĞİNİZ KANALLAR:
 
-GitHub: github.com/umutardaayhan
-
-Diğer iletişim bilgileri yakında eklenecek.
+E-Mail: umutardaayhan1c@gmail.com
+LinkedIn: https://www.linkedin.com/in/umut-arda-ayhan-b20b9b268/
+GitHub: https://github.com/umutardaayhan
 
 İletişime geçmekten çekinmeyin!`
           }
@@ -305,28 +329,20 @@ Diğer iletişim bilgileri yakında eklenecek.
       {
         name: "README.md",
         type: "file",
-        content: `# Hoş Geldiniz!
+        content: `# Sistem Başlatıldı... Umut'un Terminal Arayüzüne Hoş Geldiniz.
 
-Bu interaktif terminal portfolyosuna hoş geldiniz.
+## Başlangıç Komutları:
 
-## Başlangıç
+- help      : Yardım menüsünü ve mevcut komutları göster.
+- whoami    : Kişisel özet bilgileri görüntüle.
+- projects  : Projelerimi incele.
+- skills    : Donanımsal yeteneklerimi listele.
+- contact   : İletişim bilgilerini getir.
+- matrix    : Etrafı biraz yeşillendir.
+- clear     : Ekranı temizle.
 
-Mevcut komutları görmek için: help
-Kullanıcı bilgileri için: whoami
-Projeleri görmek için: projects
-
-## Komutlar
-- help: Yardım menüsü
-- ls: Dosyaları listele
-- cd: Dizin değiştir
-- cat: Dosya içeriğini göster
-- whoami: Kullanıcı bilgileri
-- projects: Projeler
-- skills: Yetenekler
-- contact: İletişim
-- clear: Ekranı temizle
-
-İyi gezintiler!`
+Ayrıca dosyalarda gezinmek için her zamanki Linux (ls, cd, cat) 
+komutlarını deneyimleyebilirsiniz. İyi keşifler!`
       }
     ]
   }
